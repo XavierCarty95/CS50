@@ -5,13 +5,19 @@
 int main(void)
 
 {
-    int i = 1;
-    string i = "#"
-    while(i > 0);
 
-    printf("    %s",i);
-    printf("    %scd");
-    printf("  ##");
+    int height , spaces , hashes;
+
+
+   do {
+
+
+        printf("What is the current height?");
+        height = get_int()
+
+   }
+
+
 
 
 }
