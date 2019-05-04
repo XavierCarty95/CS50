@@ -3,7 +3,7 @@
 
 int spaces();
 int hashes();
-int height,space,dash;
+int height, space, dash;
 
 int main(void)
 
@@ -11,7 +11,7 @@ int main(void)
     printf("What is the current height?");
     height = get_int();
 
-    if(height > 0)
+    if (height > 0)
     {
         spaces();
         hashes();
@@ -19,13 +19,13 @@ int main(void)
     }
 
 
-    }
+}
 
 int spaces()
 {
 
 
-    for(int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
         printf(" ");
     }
@@ -35,7 +35,7 @@ int spaces()
 
 int hashes()
 {
-    for(int i=0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
         printf("#");
     }

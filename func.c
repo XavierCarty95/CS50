@@ -36,6 +36,8 @@ int main(void)
 
 
 
+
+
 }
 
 bool isLeapyear(year)
@@ -48,7 +50,7 @@ bool isLeapyear(year)
 }
         int squared(num)
 {
-        int speed = num
+        int speed = num;
         return num * speed;
 }
 
