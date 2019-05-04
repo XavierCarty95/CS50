@@ -11,9 +11,9 @@
 //not divisible
 //however is divided 400
 void printSum();
-void printSums(int , int );
+void printSums(int,int);
 int squared(int);
-int Leapyear(int);
+bool isLeapyear(int);
 
 
 
@@ -23,33 +23,33 @@ int Leapyear(int);
 int main(void)
 {
 
-    int a;
-    printf("What is you year ?");
-    scanf("%d", &a);
-    if (a % 400 == 0)
-    {
-    printf("Your year %i is a leap year", a);
-    }
-    else if (a % 100 != 0)
-    {
-    printf("Your year  %i is not leap year",a);
-    }
+    int year = get_int("Enter a year: ");
+ if (isLeapyear(year))
+ {
+     printf("%i is a Leap Year.\n", year);
+ } else
 
-    else if(a % 4 = 0)
-    printf("Year year %i, is a leap year", a);
+ {
+  printf("%i is not a Leap Year. \n", year);
 
-    else
-    {
-    printf("is not a leap year");
-    }
+ }
+
 
 
 }
 
-int squared(num)
+bool isLeapyear(year)
 {
+    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
 
-  return num * num;
+
+
+
+}
+        int squared(num)
+{
+        int speed = num
+        return num * speed;
 }
 
 
