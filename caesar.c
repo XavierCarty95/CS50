@@ -5,11 +5,10 @@
 
 int main(int argc, string argv[])
 {
-
     if(argc > 1)
     {
      //getting arguement from user
-      string str = argv[1];
+       string str = argv[1];
       // setting int all on one line
       int key = atoi(argv[1]), counter = 0 , letter, x , i;
       //looping through strings
@@ -88,5 +87,3 @@ int main(int argc, string argv[])
     }
 
 }
-            random k
-// 122 - a + (7) 32  % 26 = 6 + a = 97

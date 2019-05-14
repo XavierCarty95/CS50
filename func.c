@@ -2,72 +2,40 @@
 #include <cs50.h>
 
 
-//This is a declaration
-
-// isLeapYear
-// return
-//accept
-//every 4 year
-//not divisible
-//however is divided 400
-void printSum();
-void printSums(int,int);
-int squared(int);
-bool isLeapyear(int);
-
-
-
-
-
+//declaration
+int total(int a , int b , int c);
 
 int main(void)
 {
-
-    int year = get_int("Enter a year: ");
- if (isLeapyear(year))
- {
-     printf("%i is a Leap Year.\n", year);
- } else
-
- {
-  printf("%i is not a Leap Year. \n", year);
-
- }
-
-
-
-
+    printf("Hello\n");
+    int result = total(5,8,2);
+    printf("%i\n", result);
+    printf("%i\n", total(4,4,4));
 
 }
 
-bool isLeapyear(year)
+//definition
+int total(a, b, c)
 {
-    return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
-
-
-
+    return a + b + c;
 
 }
-        int squared(num)
-{
-        int speed = num;
-        return num * speed;
-}
+// int getItemIndex(int item, int rMin)
+// {
+//     return item - rmin;
+// }
 
+// int encrypt(iItem, key)
+// {
+//     return iTem + key;
+// }
 
+// int modifier = imin + 1;
+// int returnToRange = rMin
 
+// int itemItemIndex = getItemIndex(item, rMin);
+// printf("itemIndex should be 17 it is : %i\n", itemIndex)
+// int encryptedKey = encrypt(itemIndex, key)
+// int convertedIndex = encrypted % modifier
 
-
-
-
-
-void printSum(void)
-{
-    printf("1 + 2 = %i\n",1 + 2);  //definition is what is in the code
-}
-
-
-void printSums(int x, int y)
-{
-    printf("%i + %i = %i\n", x ,y , x + y);
-}
+// convertedIndex + returnToRange
