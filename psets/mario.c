@@ -20,7 +20,7 @@ int main(){
     for(int j = height - i ; j > 1 ; j--){
             printf(" ");
         }
-        for(int k = 0; k < i + 2; k++ ){
+        for(int k = 1; k < i + 2; k++ ){
             printf("#");
         }
 
