@@ -5,12 +5,17 @@
 
 int main(int argc, string argv[])
 {
+    // if it is not the main file
     if(argc > 1)
     {
      //getting arguement from user
        string str = argv[1];
       // setting int all on one line
-      int key = atoi(argv[1]), counter = 0 , letter, x , i;
+      //getting string to integer
+      int key = atoi(argv[1]);
+      int counter = 0;
+      int letter;
+      int i;
       //looping through strings
     for(i = 0; i < strlen(str); i++)
     {
