@@ -8,7 +8,6 @@
 #define true 1
 #define false 0
 
-
 typedef struct NODE
 {
     int value;
@@ -29,21 +28,15 @@ int add(int *x, int y)
 
 void addNode(int value)
 {
-
     NODE *newNode = malloc(sizeof(NODE));
     newNode->value = value;
     newNode->next = NULL;
-
-    if(rootNode == NULL)
+    if (rootNode == NULL)
     {
-
         rootNode = newNode;
         return;
-
     }
-
     NODE *trav = rootNode;
-
     while(trav->next != NULL)
     {
         trav = trav->next;
@@ -71,51 +64,94 @@ void addNode(int value)
 
 void removeNode(int value)
 {
-    NODE *trav = rootNODE;
-    if(rootNODE-> value = value )
+    //if empty list will crash
+    NODE *trav = rootNode;
+    if(rootNode->value == value)
     {
-        rootNode = rootNode->next
+        rootNode = rootNode->next;
         free(trav);
-        return
+        return;
     }
 
-    while(trav->next-> != value)
+    while(trav->next->value != value)
     {
         trav = trav->next;
     }
     NODE *temp = trav->next;
-    trav -> = temp->next;
+    trav->next = temp->next;
     free(temp);
+
 }
 
-void displayList(NODE* trav)
+void displayList()
 {
-    while(trav->next != NULL){
+    NODE* trav = rootNode;
+    //should display
+    // 5, 10, 8, 17
 
+    while(trav->next != NULL)
+    {
         printf("%i, ", trav->value);
         trav = trav->next;
-    };
+    }
     printf("%i\n", trav->value);
-    //should display.
-    // 5, 10, 8, 17
+    free(trav->next);
+    trav->next = NULL;
+    return;
+    }
+
+void freeList(NODE *curNode)
+{
+     if(curNode->next ==NULL)
+     {
+         free(curNode)
+         return;
+     }
+}
+
+void freeListSelf()
+{
+    while(rootNode->next != NULL)
+     {
+        NODE *trav = rootNode;
+        while(trav->next->next != NULL)
+    {
+        trav = trav->next;
+    }
+    printf("%i\n", trav->value);
+    free(trav->next);
+    trav->next = NULL;
+     }
+    free(rootNode);
+}
+
+void freeListfunction()
+{
+     while(rootNode->next != NULL)
+     {
+        NODE *trav = rootNode;
+          while(trav->next != NULL)
+         {
+           trav = trav->next;
+        }
+        removeNode(trav->value);
+    }
+         free(rootNode);
 }
 
 int main(void)
 {
-    // NODE rootNode;
-    // rootNode.value = 5;
-    // rootNode.next = NULL;
-    addNode(5);
-    addNode(10);
-    addNode(8);
-    addNode(17);
-    removeNode(5);
-    displayList(rootNode);
-
-
-
-
-    //  printf("%i\n%i\n", rootNode.next->next->value, rootNode.next->next->next->value);
+     NODE rootNode;
+     rootNode.value = 5;
+     rootNode.next = NULL;
+     addNode(5);
+     addNode(10);
+     addNode(8);
+     addNode(17);
+     displayList();
+    // removeNode(17);
+    freeList();
+    // printf("%i\n%i\n", rootNode.next->next->value, rootNode.next->next->next->value);
 
     // int a = 5;
     // int b = 10;
